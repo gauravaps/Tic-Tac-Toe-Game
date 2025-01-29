@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Container to Center Everything */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading (Centered) */
+h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Tic Tac Toe Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Blocks (Cells) */
+.block {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #444;
+    color: #ffcc00;
+    border: 3px solid #222;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.block:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+/* Play Again Button (Centered & Styled) */
+.play-again {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.play-again:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .block {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    .play-again {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .block {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .play-again {
+        font-size: 16px;
+        padding: 8px 18px;
+    }
+}
